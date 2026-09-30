@@ -147,8 +147,8 @@ p + p { margin-top: 1rem; }
 .grid-2--topo { align-items: start; }
 
 .sobre__img {
-  aspect-ratio: 4/5; border-radius: var(--raio); box-shadow: var(--sombra);
-  background: url("assets/img/sobre.jpg") center/cover no-repeat, linear-gradient(160deg, #8cc760, #4f8a2a 55%, #16124f);
+  aspect-ratio: 1; border-radius: var(--raio); box-shadow: var(--sombra);
+  background: url("assets/img/sobre.jpg") center 60%/cover no-repeat, linear-gradient(160deg, #8cc760, #4f8a2a 55%, #16124f);
   border-bottom: 8px solid var(--verde);
 }
 .numeros { list-style: none; display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; }
@@ -306,7 +306,7 @@ p + p { margin-top: 1rem; }
   .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
   .grid-2 { grid-template-columns: 1fr; }
-  .sobre__img { aspect-ratio: 16/10; }
+  .sobre__img { aspect-ratio: 4/3; }
   .noticias { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
   .hero__seta { display: none; }
   .slide__conteudo { margin-bottom: 110px; }
