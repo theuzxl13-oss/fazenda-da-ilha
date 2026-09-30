@@ -74,7 +74,7 @@ p + p { margin-top: 1rem; }
   padding-right: 90px;
   border-radius: 0 60px 60px 0;
 }
-.logo img { height: 96px; width: auto; }
+.logo img { height: 96px; width: auto; transition: opacity .35s ease; }
 .casa {
   position: relative; margin-left: -58px;
   width: 104px; height: 104px; border-radius: 50%;
@@ -221,9 +221,13 @@ p + p { margin-top: 1rem; }
 .com-abertura { overflow: hidden; }
 .com-abertura .abertura {
   display: block; position: fixed; inset: 0; z-index: 100; overflow: hidden;
-  animation: abertura-sai .8s ease-in 4.4s forwards;
+  animation: abertura-sai .8s ease-in 9s forwards; /* segurança caso o script não rode */
 }
 .abertura.saindo { animation: abertura-sai .6s ease-in forwards; }
+/* Final: o céu some e o logo voa até o topo */
+.com-abertura .logo img { opacity: 0; }
+.abertura.voando { animation: none; background: transparent; }
+.abertura.voando > :not(.abertura__logo) { opacity: 0; transition: opacity .9s ease; }
 .abertura__ceu {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, #3b2a6b 0%, #c2456b 30%, #f26b3a 55%, #fbb03b 75%, #ffe08a 100%);
