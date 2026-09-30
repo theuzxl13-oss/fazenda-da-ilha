@@ -1,6 +1,28 @@
 // E-mail que recebe as mensagens do formulário de contato.
 const EMAIL_CONTATO = "contato@fazendadailha.com.br";
 
+// Abertura (pôr do sol): libera o site quando termina ou ao clicar em "Pular"
+const abertura = document.getElementById("abertura");
+const liberarSite = () => {
+  if (!document.body.classList.contains("com-abertura")) return;
+  document.body.classList.remove("com-abertura");
+  abertura.remove();
+  document.dispatchEvent(new Event("abertura-fim"));
+};
+const encerrarAbertura = () => {
+  abertura.classList.add("saindo");
+  setTimeout(liberarSite, 600);
+};
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  liberarSite();
+} else {
+  abertura.addEventListener("animationend", (e) => {
+    if (e.target === abertura) liberarSite();
+  });
+  abertura.addEventListener("click", encerrarAbertura);
+  document.addEventListener("keydown", encerrarAbertura, { once: true });
+}
+
 // Ano no rodapé
 document.getElementById("ano").textContent = new Date().getFullYear();
 
@@ -69,7 +91,18 @@ slides.forEach((_, i) => {
 });
 document.querySelector(".hero__seta--ant").addEventListener("click", () => { irPara(atual - 1); reiniciar(); });
 document.querySelector(".hero__seta--prox").addEventListener("click", () => { irPara(atual + 1); reiniciar(); });
-reiniciar();
+// O carrossel só começa depois da abertura, reiniciando a animação do primeiro slide
+const iniciarCarrossel = () => {
+  slides[atual].classList.remove("ativo");
+  void slides[atual].offsetWidth;
+  slides[atual].classList.add("ativo");
+  reiniciar();
+};
+if (document.body.classList.contains("com-abertura")) {
+  document.addEventListener("abertura-fim", iniciarCarrossel, { once: true });
+} else {
+  reiniciar();
+}
 
 // Animação ao aparecer na tela
 const elementos = document.querySelectorAll(".secao h2, .card, .noticia, .sobre__img, .mapa, .form");

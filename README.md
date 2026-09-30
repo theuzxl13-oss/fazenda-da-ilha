@@ -15,7 +15,8 @@ Site estático (HTML, CSS e JavaScript puros), hospedado na nuvem gratuitamente 
 
 | O quê | Onde |
 |---|---|
-| Logo oficial | Substitua `assets/img/logo.svg` (ou troque o `src` no `index.html` para um `logo.png`). |
+| Logo oficial | `assets/img/logo.png` (fundo transparente, para fundos escuros) e `assets/img/logo-quadrado.png` (ícone da aba). |
+| Abertura (pôr do sol) | Bloco `abertura` no `index.html` e seção `ABERTURA` no `styles.css` (duração: `4.4s` em `.com-abertura .abertura`). |
 | Fotos reais | Salve em `assets/img/`: `slide-1.jpg`, `slide-2.jpg`, `slide-3.jpg` (banner do topo), `sobre.jpg`, `noticia-1.jpg` … `noticia-3.jpg`. Enquanto não existirem, o site mostra fundos em degradê. |
 | E-mail do formulário | `script.js`, constante `EMAIL_CONTATO` |
 | Textos, notícias, endereço, telefone | `index.html` |
