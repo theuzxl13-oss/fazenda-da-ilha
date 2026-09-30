@@ -8,14 +8,30 @@
   <meta property="og:title" content="Fazenda da Ilha – Condomínio Residencial">
   <meta property="og:description" content="Amanhecer com propósito: viva cercado de natureza em Embu-Guaçu, SP.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#16124f">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:image" content="assets/img/logo-quadrado.png">
+  <meta name="theme-color" content="#014141">
+  <link rel="icon" href="assets/img/logo-quadrado.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo-quadrado.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="com-abertura">
+
+  <!-- Abertura: pôr do sol que termina no logo e revela o site -->
+  <div class="abertura" id="abertura" aria-hidden="true">
+    <div class="abertura__ceu"></div>
+    <div class="abertura__ceu abertura__ceu--noite"></div>
+    <div class="abertura__sol"></div>
+    <svg class="abertura__ondas" viewBox="0 0 1440 400" preserveAspectRatio="none">
+      <path class="onda onda--1" d="M0 170 C 240 90 480 90 720 150 S 1200 250 1440 140 V400 H0 Z" fill="#1b6fc2"/>
+      <path class="onda onda--2" d="M0 230 C 260 150 520 170 760 220 S 1220 300 1440 210 V400 H0 Z" fill="#2e9e3f"/>
+      <path class="onda onda--3" d="M0 290 C 280 230 540 250 780 290 S 1230 350 1440 290 V400 H0 Z" fill="#014141"/>
+    </svg>
+    <img class="abertura__logo" src="assets/img/logo.png" alt="" width="399" height="285">
+    <button class="abertura__pular" type="button">Pular ›</button>
+  </div>
 
   <header class="topo" id="topo">
     <!-- Barra verde de contato -->
@@ -37,7 +53,7 @@
     <!-- Logo + menu -->
     <div class="barra">
       <a href="#inicio" class="logo" aria-label="Fazenda da Ilha – início">
-        <img src="assets/img/logo.svg" alt="Fazenda da Ilha – Condomínio Residencial" width="150" height="102">
+        <img src="assets/img/logo.png" alt="Fazenda da Ilha – Condomínio Residencial" width="399" height="285">
       </a>
       <a href="#inicio" class="casa" aria-label="Início">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z" fill="currentColor"/></svg>
@@ -235,7 +251,7 @@
 
   <footer class="rodape">
     <div class="container rodape__inner">
-      <img src="assets/img/logo.svg" alt="Fazenda da Ilha" width="120" height="82" class="rodape__logo">
+      <img src="assets/img/logo.png" alt="Fazenda da Ilha" width="399" height="285" class="rodape__logo">
       <p>Rua Córsega, 200 – Lot. Chácara Parque Oriente<br>Embu-Guaçu – SP, 06900-000</p>
       <p>contato@fazendadailha.com.br<br>+55 11 4661-1582</p>
     </div>
