@@ -15,10 +15,11 @@ Site estático (HTML, CSS e JavaScript puros), hospedado na nuvem gratuitamente 
 
 | O quê | Onde |
 |---|---|
-| Fotos reais | Salve em `assets/img/` com os nomes `hero.jpg`, `sobre.jpg`, `galeria-1.jpg` … `galeria-4.jpg` (enquanto não existirem, o site mostra fundos em degradê verde). |
+| Logo oficial | Substitua `assets/img/logo.svg` (ou troque o `src` no `index.html` para um `logo.png`). |
+| Fotos reais | Salve em `assets/img/`: `slide-1.jpg`, `slide-2.jpg`, `slide-3.jpg` (banner do topo), `sobre.jpg`, `noticia-1.jpg` … `noticia-3.jpg`. Enquanto não existirem, o site mostra fundos em degradê. |
 | E-mail do formulário | `script.js`, constante `EMAIL_CONTATO` |
-| Textos, endereço, nota | `index.html` |
-| Cores | `styles.css`, variáveis no topo (`--verde`, `--dourado` …) |
+| Textos, notícias, endereço, telefone | `index.html` |
+| Cores | `styles.css`, variáveis no topo (`--marinho`, `--verde` …) |
 
 ## Rodar localmente
 

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-label="Fazenda da Ilha – Condomínio Residencial">
+  <defs>
+    <linearGradient id="sol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbb03b"/>
+      <stop offset="1" stop-color="#f15a24"/>
+    </linearGradient>
+    <clipPath id="c"><rect x="0" y="0" width="220" height="62"/></clipPath>
+  </defs>
+  <circle cx="72" cy="46" r="30" fill="url(#sol)" clip-path="url(#c)"/>
+  <path d="M30 60 C 70 38, 110 44, 140 58 S 190 70, 196 48 C 188 80, 150 80, 120 72 S 60 62, 30 60 Z" fill="#1b75bc"/>
+  <path d="M28 70 C 70 52, 112 58, 142 70 S 190 80, 198 62 C 186 92, 146 90, 118 82 S 58 72, 28 70 Z" fill="#39b54a"/>
+  <path d="M30 78 C 72 64, 114 70, 144 80 S 188 88, 196 76 C 182 98, 144 96, 118 90 S 60 80, 30 78 Z" fill="#006837"/>
+  <text x="110" y="120" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#1a1a1a" font-style="italic">Fazenda da Ilha</text>
+  <text x="110" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" letter-spacing="1.5" fill="#333" font-weight="700">CONDOMÍNIO RESIDENCIAL</text>
+  <text x="110" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="1" fill="#555">EMBU-GUAÇU · SÃO PAULO</text>
+</svg>
