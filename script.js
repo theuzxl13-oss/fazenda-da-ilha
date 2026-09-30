@@ -10,8 +10,37 @@ const liberarSite = () => {
   document.dispatchEvent(new Event("abertura-fim"));
 };
 const encerrarAbertura = () => {
+  if (abertura.classList.contains("voando")) return;
   abertura.classList.add("saindo");
   setTimeout(liberarSite, 600);
+};
+// O logo do centro voa até o logo do topo enquanto o céu desaparece
+const logoAbertura = abertura.querySelector(".abertura__logo");
+const logoTopo = document.querySelector(".logo img");
+const voarParaOTopo = () => {
+  if (!document.body.classList.contains("com-abertura") || abertura.classList.contains("saindo")) return;
+  const de = logoAbertura.getBoundingClientRect();
+  const para = logoTopo.getBoundingClientRect();
+  Object.assign(logoAbertura.style, {
+    animation: "none", opacity: "1", transform: "none", transformOrigin: "0 0",
+    left: `${de.left}px`, top: `${de.top}px`, width: `${de.width}px`,
+  });
+  abertura.classList.add("voando");
+  const dx = para.left - de.left;
+  const dy = para.top - de.top;
+  const escala = para.width / de.width;
+  logoAbertura.animate(
+    [
+      { transform: "translate(0, 0) scale(1)" },
+      { transform: `translate(${dx}px, ${dy}px) scale(${escala})` },
+    ],
+    { duration: 1000, easing: "cubic-bezier(.65, 0, .35, 1)", fill: "forwards" }
+  ).finished.then(() => {
+    // troca suave do logo branco da abertura pelo logo escuro do topo
+    document.body.classList.remove("com-abertura");
+    logoAbertura.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 350, fill: "forwards" })
+      .finished.then(() => { abertura.remove(); document.dispatchEvent(new Event("abertura-fim")); });
+  });
 };
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   liberarSite();
@@ -21,6 +50,7 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   });
   abertura.addEventListener("click", encerrarAbertura);
   document.addEventListener("keydown", encerrarAbertura, { once: true });
+  setTimeout(voarParaOTopo, 4000);
 }
 
 // Ano no rodapé
