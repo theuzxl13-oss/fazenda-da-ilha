@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" href="assets/img/logo-quadrado.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>.abertura{display:none}</style>
   <link rel="stylesheet" href="styles.css?v=dev">
 </head>
@@ -35,114 +35,151 @@
   </div>
 
   <header class="topo" id="topo">
-    <!-- Barra verde de contato -->
-    <div class="contatos">
-      <a class="contatos__item" href="mailto:contato@fazendadailha.com.br">
-        <span class="contatos__icone" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-        </span>
-        <span><strong>E-mail</strong>contato@fazendadailha.com.br</span>
-      </a>
-      <a class="contatos__item" href="tel:+551146629900">
-        <span class="contatos__icone" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
-        </span>
-        <span><strong>Telefone</strong>(11) 4662-9900</span>
-      </a>
-    </div>
-
-    <!-- Logo + menu -->
-    <div class="barra">
+    <div class="topo__inner container">
       <a href="#inicio" class="logo" aria-label="Fazenda da Ilha – início">
-        <img src="assets/img/logo-escuro.png" alt="Fazenda da Ilha – Condomínio Residencial" width="392" height="281">
+        <img class="logo__claro" src="assets/img/logo.png" alt="Fazenda da Ilha – Condomínio Residencial" width="392" height="281">
+        <img class="logo__escuro" src="assets/img/logo-escuro.png" alt="" width="392" height="281">
       </a>
-      <a href="#inicio" class="casa" aria-label="Início">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z" fill="currentColor"/></svg>
-      </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Principal">
         <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
           <span></span><span></span><span></span>
         </button>
         <div id="menu" class="menu">
-          <a href="#inicio" class="ativo">Home</a>
+          <a href="#inicio" class="ativo">Início</a>
           <a href="#sobre">Sobre</a>
-          <a href="#administracao">Administração</a>
-          <a href="#noticias">Notícias</a>
           <a href="#atividades">Atividades</a>
-          <a href="https://fazendadailha.superlogica.net/clients/areadocondomino/cobranca" class="btn btn--verde" target="_blank" rel="noopener">Área Associado</a>
+          <a href="#noticias">Notícias</a>
+          <a href="#administracao">Administração</a>
+          <a href="https://fazendadailha.superlogica.net/clients/areadocondomino/cobranca" class="btn btn--verde" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5Z" fill="currentColor"/></svg>
+            Área do Associado
+          </a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO / SLIDES -->
+    <!-- HERO -->
     <section class="hero" id="inicio" aria-roledescription="carrossel" aria-label="Destaques">
       <!-- Para usar fotos reais, salve em assets/img/slide-1.jpg, slide-2.jpg e slide-3.jpg -->
-      <div class="slide slide--1 ativo">
-        <div class="slide__conteudo">
-          <h1 class="pilula">Amanhecer com propósito</h1>
-          <p>Cada novo dia começa com o som dos pássaros e a brisa da mata.</p>
-        </div>
+      <div class="hero__fundos" aria-hidden="true">
+        <div class="fundo fundo--1 ativo"></div>
+        <div class="fundo fundo--2"></div>
+        <div class="fundo fundo--3"></div>
       </div>
-      <div class="slide slide--2">
-        <div class="slide__conteudo">
-          <h2 class="pilula">Natureza que acolhe</h2>
-          <p>Ruas arborizadas, lotes amplos e fauna preservada ao redor da sua casa.</p>
+
+      <div class="hero__conteudo container">
+        <p class="hero__local">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" fill="currentColor"/></svg>
+          Condomínio residencial · Embu-Guaçu, SP
+        </p>
+        <div class="hero__textos">
+          <div class="slide ativo">
+            <h1>Amanhecer com <em>propósito</em></h1>
+            <p>Cada novo dia começa com o som dos pássaros e a brisa da mata.</p>
+          </div>
+          <div class="slide">
+            <h2>Natureza que <em>acolhe</em></h2>
+            <p>Ruas arborizadas, lotes amplos e fauna preservada ao redor da sua casa.</p>
+          </div>
+          <div class="slide">
+            <h2>Viver em <em>comunidade</em></h2>
+            <p>Segurança, organização e vizinhos que cuidam do lugar onde vivem.</p>
+          </div>
         </div>
-      </div>
-      <div class="slide slide--3">
-        <div class="slide__conteudo">
-          <h2 class="pilula">Viver em comunidade</h2>
-          <p>Segurança, organização e vizinhos que cuidam do lugar onde vivem.</p>
+        <div class="hero__acoes">
+          <a href="#sobre" class="btn btn--verde">Conheça o condomínio</a>
+          <a href="#administracao" class="btn btn--vazado">Fale com a gente</a>
         </div>
+        <a class="selo" href="https://www.google.com/maps/search/?api=1&query=Fazenda+da+Ilha+Residencial+Condom%C3%ADnio+Embu-Gua%C3%A7u" target="_blank" rel="noopener">
+          <span class="selo__nota">4,6</span>
+          <span><span class="estrelas" aria-label="4,6 de 5 estrelas">★★★★<span class="estrelas__meia">★</span></span><small>469 avaliações no Google</small></span>
+        </a>
       </div>
-      <button class="hero__seta hero__seta--ant" aria-label="Slide anterior">‹</button>
-      <button class="hero__seta hero__seta--prox" aria-label="Próximo slide">›</button>
-      <div class="hero__pontos" role="tablist" aria-label="Escolher slide"></div>
+
+      <div class="hero__controles container">
+        <span class="hero__contador"><strong id="slide-num">01</strong> / 03</span>
+        <div class="hero__pontos" role="tablist" aria-label="Escolher slide"></div>
+        <button class="hero__seta hero__seta--ant" aria-label="Slide anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="hero__seta hero__seta--prox" aria-label="Próximo slide">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <svg class="hero__onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 70 C 240 20 480 20 720 60 S 1200 120 1440 50 V120 H0 Z" fill="#6cc024" opacity=".35"/>
+        <path d="M0 90 C 260 50 520 60 760 85 S 1220 120 1440 80 V120 H0 Z" fill="#fff"/>
+      </svg>
     </section>
 
     <!-- SOBRE -->
     <section class="secao" id="sobre">
       <div class="container grid-2">
-        <div class="sobre__img" role="img" aria-label="Portaria da Fazenda da Ilha, com o letreiro do condomínio e palmeiras"></div>
+        <div class="sobre__midia">
+          <div class="sobre__img" role="img" aria-label="Portaria da Fazenda da Ilha, com o letreiro do condomínio e palmeiras"></div>
+          <div class="sobre__badge">
+            <strong>4,6★</strong>
+            <span>469+ avaliações<br>no Google</span>
+          </div>
+        </div>
         <div>
           <p class="etiqueta">Sobre nós</p>
-          <h2>Um lugar para morar bem</h2>
+          <h2>Um lugar para <em>morar bem</em></h2>
           <p>A <strong>Fazenda da Ilha</strong> é um condomínio residencial localizado em Embu-Guaçu, na Grande São Paulo. Aqui, casas amplas convivem com áreas verdes preservadas, criando o ambiente ideal para quem busca qualidade de vida para toda a família.</p>
           <p>Nossa missão é oferecer aos moradores um lugar seguro, organizado e acolhedor, com contato direto com a natureza e uma comunidade unida.</p>
-          <ul class="numeros">
-            <li><strong>4,6★</strong><span>Nota no Google</span></li>
-            <li><strong>469+</strong><span>Avaliações</span></li>
-            <li><strong>100%</strong><span>Natureza ao redor</span></li>
+          <ul class="checks">
+            <li>Natureza preservada ao redor</li>
+            <li>Lotes amplos e ruas arborizadas</li>
+            <li>Portaria com controle de acesso</li>
+            <li>Comunidade unida e organizada</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- ATIVIDADES -->
-    <section class="secao secao--clara" id="atividades">
+    <section class="secao secao--escura" id="atividades">
       <div class="container">
-        <p class="etiqueta center">Atividades</p>
-        <h2 class="center">Tudo para o seu bem-estar</h2>
+        <div class="titulo-linha">
+          <div>
+            <p class="etiqueta">Atividades</p>
+            <h2>Tudo para o seu <em>bem-estar</em></h2>
+          </div>
+          <p>Uma rotina mais leve, em contato com a natureza e com a segurança de estar em casa.</p>
+        </div>
         <div class="cards">
           <article class="card">
-            <div class="card__icone">🛡️</div>
+            <span class="card__num">01</span>
+            <div class="card__icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
             <h3>Portaria e segurança</h3>
             <p>Controle de acesso para garantir a tranquilidade de moradores e visitantes.</p>
           </article>
           <article class="card">
-            <div class="card__icone">🌳</div>
+            <span class="card__num">02</span>
+            <div class="card__icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-6M12 15c-3.5 0-6-2.3-6-5.5C6 6 8.7 3 12 3s6 3 6 6.5c0 3.2-2.5 5.5-6 5.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12 9.5 9.5M12 10.5l2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
             <h3>Trilhas e áreas verdes</h3>
             <p>Espaço aberto para caminhar, pedalar e observar a fauna e a flora da região.</p>
           </article>
           <article class="card">
-            <div class="card__icone">🏡</div>
+            <span class="card__num">03</span>
+            <div class="card__icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V20h13V9.5M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
             <h3>Lotes amplos</h3>
             <p>Terrenos espaçosos com casas, jardins e piscinas — liberdade para construir o seu lar.</p>
           </article>
           <article class="card">
-            <div class="card__icone">🤝</div>
+            <span class="card__num">04</span>
+            <div class="card__icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6M14 14.3c.8-.2 1.6-.3 2.5-.3 2.8 0 5 2.2 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
             <h3>Eventos da comunidade</h3>
             <p>Encontros e ações entre moradores que fortalecem a convivência no condomínio.</p>
           </article>
@@ -153,30 +190,32 @@
     <!-- NOTÍCIAS -->
     <section class="secao" id="noticias">
       <div class="container">
-        <p class="etiqueta center">Notícias</p>
-        <h2 class="center">Fique por dentro</h2>
+        <div class="titulo-linha">
+          <div>
+            <p class="etiqueta">Notícias</p>
+            <h2>Fique por <em>dentro</em></h2>
+          </div>
+          <p>Comunicados e novidades da administração para moradores e associados.</p>
+        </div>
         <!-- Edite os cards abaixo para publicar comunicados e novidades -->
         <div class="noticias">
           <article class="noticia">
-            <div class="noticia__img noticia__img--1"></div>
+            <div class="noticia__img noticia__img--1"><span class="noticia__tag">Comunicado</span></div>
             <div class="noticia__corpo">
-              <time>Comunicado</time>
               <h3>Assembleia geral de moradores</h3>
               <p>Acompanhe as datas e pautas das próximas assembleias diretamente com a administração.</p>
             </div>
           </article>
           <article class="noticia">
-            <div class="noticia__img noticia__img--2"></div>
+            <div class="noticia__img noticia__img--2"><span class="noticia__tag">Meio ambiente</span></div>
             <div class="noticia__corpo">
-              <time>Meio ambiente</time>
               <h3>Preservação da mata e da fauna</h3>
               <p>Ajude a manter o condomínio verde: respeite as áreas de preservação e os animais silvestres.</p>
             </div>
           </article>
           <article class="noticia">
-            <div class="noticia__img noticia__img--3"></div>
+            <div class="noticia__img noticia__img--3"><span class="noticia__tag">Serviços</span></div>
             <div class="noticia__corpo">
-              <time>Serviços</time>
               <h3>Manutenção das vias internas</h3>
               <p>Informações sobre obras, limpeza e manutenção das ruas são divulgadas pela administração.</p>
             </div>
@@ -185,83 +224,134 @@
       </div>
     </section>
 
-    <!-- AVALIAÇÕES -->
-    <section class="faixa">
-      <div class="container faixa__inner">
-        <div class="nota">
-          <span class="nota__num">4,6</span>
-          <div>
-            <span class="estrelas" aria-label="4,6 de 5 estrelas">★★★★<span class="estrelas__meia">★</span></span>
-            <p><strong>469 avaliações</strong> no Google</p>
-          </div>
+    <!-- ÁREA DO ASSOCIADO -->
+    <section class="associado" id="associado">
+      <div class="container associado__inner">
+        <div class="associado__sol" aria-hidden="true"></div>
+        <div>
+          <h2>Área do Associado</h2>
+          <p>Acesse boletos, segunda via e informações de cobrança do condomínio.</p>
         </div>
-        <a class="btn btn--verde" href="https://www.google.com/maps/search/?api=1&query=Fazenda+da+Ilha+Residencial+Condom%C3%ADnio+Embu-Gua%C3%A7u" target="_blank" rel="noopener">Ver avaliações</a>
+        <a class="btn btn--branco" href="https://fazendadailha.superlogica.net/clients/areadocondomino/cobranca" target="_blank" rel="noopener">Acessar Área do Associado →</a>
       </div>
     </section>
 
     <!-- ADMINISTRAÇÃO -->
     <section class="secao" id="administracao">
-      <div class="container grid-2 grid-2--topo">
-        <div>
-          <p class="etiqueta">Administração</p>
-          <h2>Fale com a administração</h2>
-          <p>Dúvidas, solicitações ou quer conhecer o condomínio? Entre em contato pelos canais abaixo ou envie uma mensagem.</p>
-          <ul class="canais">
-            <li><strong>E-mail</strong><a href="mailto:contato@fazendadailha.com.br">contato@fazendadailha.com.br</a></li>
-            <li><strong>Telefone</strong><a href="tel:+551146629900">(11) 4662-9900</a></li>
-            <li><strong>Endereço</strong>Rua Córsega, 200 – Lot. Chácara Parque Oriente<br>Embu-Guaçu – SP, 06900-000</li>
-          </ul>
-          <div class="mapa">
-            <iframe
-              title="Mapa da Fazenda da Ilha"
-              src="https://www.google.com/maps?q=Fazenda+da+Ilha+Residencial+Condom%C3%ADnio,+Rua+C%C3%B3rsega+200,+Embu-Gua%C3%A7u+-+SP&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="container">
+        <div class="contato">
+          <div class="contato__info">
+            <p class="etiqueta">Administração</p>
+            <h2>Fale com a <em>administração</em></h2>
+            <p>Dúvidas, solicitações ou quer conhecer o condomínio? Entre em contato pelos canais abaixo, envie uma mensagem ou converse com o nosso assistente virtual.</p>
+            <ul class="canais">
+              <li>
+                <span class="canais__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+                <span><strong>E-mail</strong><a href="mailto:contato@fazendadailha.com.br">contato@fazendadailha.com.br</a></span>
+              </li>
+              <li>
+                <span class="canais__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg></span>
+                <span><strong>Telefone</strong><a href="tel:+551146629900">(11) 4662-9900</a></span>
+              </li>
+              <li>
+                <span class="canais__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" fill="currentColor"/></svg></span>
+                <span><strong>Endereço</strong>Rua Córsega, 200 – Lot. Chácara Parque Oriente<br>Embu-Guaçu – SP, 06900-000</span>
+              </li>
+            </ul>
           </div>
+          <form class="form" id="form-contato">
+            <h3>Envie sua mensagem</h3>
+            <div class="form__linha">
+              <label>Nome
+                <input type="text" name="nome" required autocomplete="name">
+              </label>
+              <label>Telefone
+                <input type="tel" name="telefone" autocomplete="tel">
+              </label>
+            </div>
+            <label>E-mail
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+            <label>Mensagem
+              <textarea name="mensagem" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="btn btn--verde">Enviar mensagem</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
         </div>
-        <form class="form" id="form-contato">
-          <h3>Envie sua mensagem</h3>
-          <label>Nome
-            <input type="text" name="nome" required autocomplete="name">
-          </label>
-          <label>E-mail
-            <input type="email" name="email" required autocomplete="email">
-          </label>
-          <label>Telefone
-            <input type="tel" name="telefone" autocomplete="tel">
-          </label>
-          <label>Mensagem
-            <textarea name="mensagem" rows="5" required></textarea>
-          </label>
-          <button type="submit" class="btn btn--verde">Enviar mensagem</button>
-          <p class="form__status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ÁREA DO ASSOCIADO -->
-    <section class="associado" id="associado">
-      <div class="container associado__inner">
-        <div>
-          <h2>Área do Associado</h2>
-          <p>Acesse boletos, segunda via e informações de cobrança do condomínio.</p>
+        <div class="mapa">
+          <iframe
+            title="Mapa da Fazenda da Ilha"
+            src="https://www.google.com/maps?q=Fazenda+da+Ilha+Residencial+Condom%C3%ADnio,+Rua+C%C3%B3rsega+200,+Embu-Gua%C3%A7u+-+SP&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
-        <a class="btn btn--verde" href="https://fazendadailha.superlogica.net/clients/areadocondomino/cobranca" target="_blank" rel="noopener">Acessar Área do Associado</a>
       </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <div class="container rodape__inner">
-      <img src="assets/img/logo.png" alt="Fazenda da Ilha" width="392" height="281" class="rodape__logo">
-      <p>Rua Córsega, 200 – Lot. Chácara Parque Oriente<br>Embu-Guaçu – SP, 06900-000</p>
-      <p>contato@fazendadailha.com.br<br>(11) 4662-9900</p>
+    <svg class="rodape__onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 40 C 240 0 480 0 720 30 S 1200 80 1440 20 V0 H0 Z" fill="#fff"/>
+    </svg>
+    <div class="container rodape__grid">
+      <div>
+        <img src="assets/img/logo.png" alt="Fazenda da Ilha" width="392" height="281" class="rodape__logo">
+        <p>Natureza, tranquilidade e qualidade de vida em Embu-Guaçu, SP.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#atividades">Atividades</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#administracao">Administração</a></li>
+          <li><a href="https://fazendadailha.superlogica.net/clients/areadocondomino/cobranca" target="_blank" rel="noopener">Área do Associado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:contato@fazendadailha.com.br">contato@fazendadailha.com.br</a></li>
+          <li><a href="tel:+551146629900">(11) 4662-9900</a></li>
+          <li>Rua Córsega, 200 – Lot. Chácara Parque Oriente<br>Embu-Guaçu – SP, 06900-000</li>
+        </ul>
+      </div>
     </div>
     <p class="rodape__copy">© <span id="ano"></span> Fazenda da Ilha – Condomínio Residencial. Todos os direitos reservados.</p>
   </footer>
 
   <a href="#inicio" class="subir" aria-label="Voltar ao topo">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 4 13h5v6h6v-6h5z" fill="currentColor"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
+
+  <!-- Assistente virtual -->
+  <div class="chat" id="chat">
+    <button class="chat__abrir" type="button" aria-expanded="false" aria-controls="chat-painel" aria-label="Abrir assistente virtual">
+      <svg class="chat__ic-balao" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H9l-5 4v-4H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z" fill="currentColor"/><circle cx="8.5" cy="10.5" r="1.3" fill="#014141"/><circle cx="12" cy="10.5" r="1.3" fill="#014141"/><circle cx="15.5" cy="10.5" r="1.3" fill="#014141"/></svg>
+      <svg class="chat__ic-fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <span class="chat__dica" id="chat-dica">Olá! Posso ajudar? 👋</span>
+    <section class="chat__painel" id="chat-painel" role="dialog" aria-label="Assistente virtual da Fazenda da Ilha" hidden>
+      <header class="chat__topo">
+        <img src="assets/img/logo-quadrado.png" alt="" width="40" height="40">
+        <div>
+          <strong>Assistente da Fazenda</strong>
+          <span><i></i> Online agora</span>
+        </div>
+        <button type="button" class="chat__fechar" aria-label="Fechar assistente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="chat__msgs" id="chat-msgs" aria-live="polite"></div>
+      <div class="chat__sugestoes" id="chat-sugestoes"></div>
+      <form class="chat__form" id="chat-form" autocomplete="off">
+        <input type="text" id="chat-texto" placeholder="Digite sua pergunta…" aria-label="Sua mensagem" maxlength="500">
+        <button type="submit" aria-label="Enviar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 21 3l-8.5 18-2-7.5z" fill="currentColor"/></svg>
+        </button>
+      </form>
+    </section>
+  </div>
 
   <script src="script.js?v=dev"></script>
 </body>
